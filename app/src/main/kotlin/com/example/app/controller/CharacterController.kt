@@ -9,7 +9,7 @@ import org.springframework.web.bind.annotation.*
 
 
 @RestController
-@RequestMapping("customer/v1")
+@RequestMapping("characters/v1")
 class CharacterController(
     val characterService: CharacterService
 ) {
@@ -20,11 +20,11 @@ class CharacterController(
         characterService.createCharacter(character)
     }
 
-//    @GetMapping
-//    @ResponseStatus(HttpStatus.OK)
-//    fun findAll(): List<CharacterResponseDto>{
-//        characterService.findAll()
-//    }
+    @GetMapping
+    @ResponseStatus(HttpStatus.OK)
+    fun findAll(): List<Character>{
+        return characterService.findAll()
+    }
 //
 //    @GetMapping
 //    @ResponseStatus(HttpStatus.OK)

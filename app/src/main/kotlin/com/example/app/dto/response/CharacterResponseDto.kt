@@ -1,7 +1,7 @@
 package com.example.app.dto.response
 
 data class CharacterResponseDto(
-    val nameOfCharacter: String,
-    val ageOfCharacter: Int,
-    val speciesOfCharacter: String,
+    val name: String,
+    val age: Int,
+    val species: String,
 )

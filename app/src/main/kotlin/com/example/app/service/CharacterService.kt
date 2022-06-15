@@ -1,6 +1,5 @@
 package com.example.app.service
 
-import com.example.app.dto.request.CharacterRequestDto
 import com.example.app.model.Character
 import com.example.app.repository.CharacterRepository
 import org.springframework.stereotype.Service
@@ -13,9 +12,9 @@ class CharacterService(
         characterRepository.save(character)
     }
 
-//    fun findAll(): List<CharacterRequestDto>{
-//
-//    }
+    fun findAll(): List<Character> {
+        return characterRepository.findAll()
+    }
 //
 //    fun findById(idCharacter: Int): Character{
 //

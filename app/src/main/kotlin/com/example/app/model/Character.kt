@@ -3,7 +3,7 @@ package com.example.app.model
 import javax.persistence.*
 
 
-@Entity(name = "character")
+@Entity(name = "characters")
 data class Character(
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
@@ -15,10 +15,6 @@ data class Character(
     @Column(name = "age_character")
     val ageOfCharacter: Int,
 
-    @Column(name = "specie_character")
-    val speciesOfCharacter: String,
-
-    @ManyToOne
-    @JoinColumn(name = "id_planet")
-    val idPlanet: Int
+    @Column(name = "species_character")
+    val speciesOfCharacter: String
 )
