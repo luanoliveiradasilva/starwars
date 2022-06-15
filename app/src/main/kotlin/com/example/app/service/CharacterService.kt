@@ -9,23 +9,23 @@ import org.springframework.stereotype.Service
 class CharacterService(
     private val characterRepository: CharacterRepository
 ){
-    fun createCharacter(character: CharacterRequestDto){
-
+    fun createCharacter(character: Character){
+        characterRepository.save(character)
     }
 
-    fun findAll(): List<CharacterRequestDto>{
-
-    }
-
-    fun findById(idCharacter: Int): Character{
-
-    }
-
-    fun updateCharacter(character: Character){
-
-    }
-
-    fun delete(idCharacter: Int){
-
-    }
+//    fun findAll(): List<CharacterRequestDto>{
+//
+//    }
+//
+//    fun findById(idCharacter: Int): Character{
+//
+//    }
+//
+//    fun updateCharacter(character: Character){
+//
+//    }
+//
+//    fun delete(idCharacter: Int){
+//
+//    }
 }
